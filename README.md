@@ -72,6 +72,29 @@ print data[0]
 print data[1]
 
 
+print data[10][0]
+print data[10][1:-1]
+
+c20_data = []
+for line in data:
+    if (line[0] >= 1900) and (line[0] < 2000):
+        c20_data.append(line[1:-1])
+ 
+print c20_data[0]
+print max(c20_data[0])
+
+month_names = [ "Jan", "Feb", "Mar", "Apr", \
+    "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
+    
+print "In South East England"
+for row in xrange(0,100,10):
+    year = 1900 + row
+    max_precip = max(c20_data[row])
+    month = c20_data[row].index(max_precip)
+    
+print "In the year",year,"the rainiest month was",month_names[month],"with",max_precip,"mm"
+
+
 
 
 
