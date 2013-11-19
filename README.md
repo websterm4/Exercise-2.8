@@ -94,6 +94,15 @@ for row in xrange(0,100,10):
     
 print "In the year",year,"the rainiest month was",month_names[month],"with",max_precip,"mm"
 
+result = []
+for row in xrange(100):
+    result.append(max(c20_data[row]))
+    
+print "In South East England, the maximum value for the years 1900 to 1999 is"
+print result
+print "The highest rainfall in a month was",max(result),"mm"
+print "It occurred in",result.index(max(result))+1900
+
 
 
 
